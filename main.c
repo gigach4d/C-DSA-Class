@@ -2,6 +2,8 @@
 #define size 100 //macro
 #include<limits.h>
 #include <float.h>
+#include <math.h>
+
 // #-preprocessor
 /*
 int main(){
@@ -52,7 +54,7 @@ int main(){
     int f;
     scanf("%i",&f);
     printf("%c \n",f);
-}*/
+}
 
 //Program to print decimal digits of an input float number. Also demonstrates typecasting.
 int main(){
@@ -63,4 +65,41 @@ int main(){
     printf("%.2f \n",num);
     printf("%.1f \n",num);
     printf("%i \n",(int)num);
+}
+
+//Program to take a float number as the input, and print it's ceil (next positive integer),
+// floor(previous positive integer), and it's integer version. 
+int main(){
+    float x;
+    printf("Input:");
+    scanf("%f",&x);
+    printf("Output:\n");
+    printf("%d\n",(int)x);
+    printf("%.1f\n",ceil(x));
+    printf("%.1f\n",floor(x));
+    
+    return 0;
+}
+
+int main(){
+    int fnum;
+    scanf("%d",&fnum);//25
+    int ans1=fnum%10;//5
+    int ans2=fnum/10;//2
+    printf("%d\n",ans1+ans2);//2+5=7
+}*/
+
+int main(){
+    int l,b;
+    float p,a;
+    printf("Enter length of the ground:");
+    scanf("%i",&l);
+    printf("Enter the breadth of the ground:");
+    scanf("%i",&b);
+    
+
+    p=2*(l+b);
+    a=l*(float)b;
+    printf("Length of the rope is: %.2f\n",p);
+    printf("Area of carpet required: %.2f\n",a);
 }
