@@ -87,7 +87,7 @@ int main(){
     int ans1=fnum%10;//5
     int ans2=fnum/10;//2
     printf("%d\n",ans1+ans2);//2+5=7
-}*/
+}
 
 int main(){
     int l,b;
@@ -102,4 +102,11 @@ int main(){
     a=l*(float)b;
     printf("Length of the rope is: %.2f\n",p);
     printf("Area of carpet required: %.2f\n",a);
+}*/
+
+int main(){
+    int x;
+    scanf("%d",&x);
+    printf("%c\n",x);
+    return 0;
 }
