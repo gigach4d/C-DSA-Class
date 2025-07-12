@@ -103,10 +103,145 @@ int main(){
     printf("Length of the rope is: %.2f\n",p);
     printf("Area of carpet required: %.2f\n",a);
 }*/
+//Left Shift and Right Shift:
+/*
+4<<1 = 8    (Lshift equivalent to multiplying by 2)
+4>>1 = 2    (Rshift equivalent to dividing by 2)
+
+(8 4 2 1) 
+ 0 1 0 0 = 4
+ 1 0 0 0 = 8 
+
+(8 4 2 1) 
+ 0 1 0 0 = 4
+ 0 0 1 0 = 2 
+
+#include <string.h>
+void main(){
+    char sat[]="Holiday";
+    if (strcmp(sat,"Holiday")==0){
+        printf("I'm happy");
+    }
+}
+int main(){
+    int sat=5;
+    if ((sat>=0 || sat<5)){
+        printf("Im happy.\n");
+    }
+    else{
+        printf("Not happy.\n");
+    }
+}
+int main(){
+    int ticket=150;
+    if(ticket>=100 && ticket<=120){
+        printf("Third class\n");
+    }
+    else if(ticket>=121 && ticket<=150){
+        printf("Second class\n");
+    }
+}
+//Switch-case code:
+int main(){
+    char a=5;
+    switch(a){
+        case 1:
+        case 2:
+        case 3: 
+        case 4:
+            printf("First half\n");
+            break;
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            printf("Second half\n");
+            break;
+    }
+}
+//To count number of digits in an input number.
+int main(){
+    int a;
+    scanf("%i",&a);
+    switch(a){
+        case 1 ... 9:
+            printf("One digit\n");
+            break;
+        case 10 ... 99:
+            printf("Two digit\n");
+            break;
+        case 100 ... 999:
+            printf("Three digit\n");
+            break;
+    }
+}
+//Fibonacci Number check: Generates the fibonacci sequence, and detects whether given number is in the sequence.
+#include <stdio.h>
+
+int main() {
+    int num, a = 0, b = 1, c;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num == 0 || num == 1) {
+        printf("%d is a Fibonacci number.\n", num);
+        return 0;
+    }
+
+    while (b < num) {
+        c = a + b;
+        a = b;
+        b = c;
+    }
+
+    if (b == num)
+        printf("%d is a Fibonacci number.\n", num);
+    else
+        printf("%d is NOT a Fibonacci number.\n", num);
+
+    return 0;
+}
+//Leap year
 
 int main(){
+    int year=2004;
+    if ((year%4==0 && year%100!=0) || (year%400==0)){
+        printf("Leap year");
+    }
+}
+
+int main()
+{
     int x;
-    scanf("%d",&x);
-    printf("%c\n",x);
+    int cnt = 0;
+    scanf("%i", &x);
+    int temp = x;
+    while (temp > 0){
+        temp = temp / 10;
+        cnt++;
+    }
+    int au = (x * x) % (int)pow(10, 2);
+    if (x == au){
+        printf("Automorphic Number");
+    }
+    else{
+        printf("Not Automorphic Number");
+    }
     return 0;
+}*/
+//demonstration of exit function
+#include <stdlib.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    if (n<=0){
+        printf("Invalid input\n");
+        exit(0);// return 0 or if else
+    }
+    for (int i=0; i<5;i++){
+        if(i==4) break;
+        printf("%d\n",i);
+    }
 }
