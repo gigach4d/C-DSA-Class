@@ -230,8 +230,8 @@ int main()
         printf("Not Automorphic Number");
     }
     return 0;
-}*/
-//demonstration of exit function
+}
+//demonstration of exit function and goto function
 #include <stdlib.h>
 int main(){
     int n;
@@ -241,7 +241,119 @@ int main(){
         exit(0);// return 0 or if else
     }
     for (int i=0; i<5;i++){
-        if(i==4) break;
+        if(i==4) goto temp;
         printf("%d\n",i);
+    }
+    temp:
+        printf("End of program\n");
+}
+
+//To print a box full of stars
+int main(){
+    for(int i=0;i<5;i++){
+        for (int j=0;j<5;j++){
+            printf("* ");
+        }
+        printf("\n")
+    }
+}
+//To print stairs of stars
+int main(){
+    for(int i=0;i<5;i++){
+        for (int j=0;j<i;j++){
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+Program to print:
+* * * * * 
+*   *   * 
+* * * * * 
+*   *   * 
+* * * * * 
+
+int main(){
+    for (int i=0;i<5;i++){
+        for (int j=0;j<5;j++){
+            if (i%2==0){
+                printf("* ");
+            }
+            else{
+                if (j%2!=0){
+                    printf("  ");
+                }
+                else{
+                    printf("* ");
+                }
+            }
+        }
+        printf("\n");
+    }
+}
+
+void main(){
+    //Array is a collection of elements of a similar datatype. In this case, int type.
+    //format:       datatype arr_name[size]={val1,val2};
+    int arr[]={1,4,8,6,89};
+    printf("%d\n",4[arr]);
+    printf("%ld\n",sizeof(arr)/sizeof(arr[0]));
+}
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    int sum=0;
+    while(n!=0){
+        int dig=n%10;
+        sum+=dig;
+        n/=10;
+    }
+    printf("%d\n",sum);
+}
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    int prod=1;
+    while(n!=0){
+        int dig=n%10;
+        prod*=dig;
+        n/=10;
+    }
+    printf("%d\n",prod);
+}
+
+int main(){
+    int n;
+    scanf("%d",&n);
+    int rev=0;
+    while(n!=0){
+        int dig=n%10;
+        rev=rev*10+dig;
+        n/=10;
+    }
+    printf("%d\n",rev);
+}*/
+//2D ARRAY
+#include "stdlib.h"
+int main(){
+    /*
+    Syntax:
+    //datatype arr_name[rows][cols]={
+        {row1 values},
+        {row2 values},
+        {row3 values}
+    }
+    */
+    int arr[2][3]={
+        {45,78,89},
+        {98,95,21}
+    };
+    for (int i=0;i<2;i++){
+        for (int j=0; j<3; j++){
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
     }
 }
